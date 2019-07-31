@@ -6,28 +6,11 @@
 /*   By: pmogwere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 12:09:34 by pmogwere          #+#    #+#             */
-/*   Updated: 2019/07/31 12:13:20 by pmogwere         ###   ########.fr       */
+/*   Updated: 2019/07/31 12:31:12 by pmogwere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int			ft_pow(int a, int value)
-{
-	int		i;
-
-	i = 1;
-	if (a == 0)
-		return (1);
-	if (a == 1)
-		return (value);
-	while (a > 0)
-	{
-		i *= value;
-		a--;
-	}
-	return (i);
-}
 
 int			hex(char *str, int base)
 {
