@@ -17,7 +17,7 @@ char		*ft_itoa_base(int value, int base)
 	char	*s;
 	char	*str;
 	int		neg;
-	int		len;
+	size_t	len;
 
 	s = "0123456789ABCDEF";
 	len = ft_intlen(value);
