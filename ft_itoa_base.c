@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char		*ft_itoa_base(int value, int base)
 {
@@ -20,8 +21,9 @@ char		*ft_itoa_base(int value, int base)
 	size_t	len;
 
 	s = "0123456789ABCDEF";
-	len = ft_intlen(value);
+	len = ft_intlen_base(value, base);
 	neg = 1;
+	
 	if (value < 0)
 	{
 		neg *= -1;
@@ -29,10 +31,10 @@ char		*ft_itoa_base(int value, int base)
 		(base == 10) ? len++ : 0;
 	}
 	str = (char *)malloc(sizeof(char) * len);
-	str[len] = 0;
+	str[len--] = 0;
 	while (value)
 	{
-		str[--len] = s[value % base];
+		str[len--] = s[value % base];
 		value /= base;
 	}
 	(neg < 0 && base == 10) ? str[0] = '-' : 0;
